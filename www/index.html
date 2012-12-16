@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Skeleton Demo</title>
+    <style type="text/css">
+      html, body { background: black; }
+      .stats { z-index: 666; width: 100%; display: -webkit-box; text-align: center;  }
+      .stats h1 { color: white; display: block; -webkit-box-flex: 1; margin: 0; padding: 0; }
+      #container { z-index: 666; position: absolute; top: 0; right: 0; bottom: 0; left: 0; }
+      #droneStream { z-index: 5; position: relative; top: 0; right: 0; left: 0; bottom: 0; }
+      #droneStream canvas { width: 100%; height: 100%; }
+    </style>
+  </head>
+  <body>
+    <div id="container"></div>
+    
+    <div class="stats direction">
+      <h1>drone stopped</h1>
+    </div>
+    
+    <div class="stats status">
+      <h1>waiting for pose</h1>
+    </div>
+    
+    <div id="droneStream"></div>
+    
+    
+    <script src="/dronestream/nodecopter-client.js" type="text/javascript" charset="utf-8"></script>
+    <script src="openni.js"></script>
+    <script src="three.min.js"></script>
+    <script src="jquery.min.js"></script>
+    <script src="requestAnimationFrame.js"></script>
+    <script src="browserify-bundle.js"></script>
+    <script src="demo.js"></script>
+
+    <script type="text/javascript" charset="utf-8">
+        new NodecopterStream(document.getElementById("droneStream"));
+    </script>
+    
+  </body>
+</html>

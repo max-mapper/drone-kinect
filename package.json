@@ -1,0 +1,8 @@
+{
+  "name": "parrot-kinect",
+  "version": "0.0.1",
+  "dependencies": {
+    "openni-browser": "0.1.4",
+    "ar-drone": "0.0.4"
+  }
+}
